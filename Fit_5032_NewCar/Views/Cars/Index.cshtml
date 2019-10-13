@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Fit_5032_NewCar.Models.Car>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CarVin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarMark)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarModel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarRegisterDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarVin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarMark)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarModel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarRegisterDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CarID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CarID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CarID })
+        </td>
+    </tr>
+}
+
+</table>

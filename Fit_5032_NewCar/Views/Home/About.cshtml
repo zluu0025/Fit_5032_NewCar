@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Introducation Page";
+}
+
+
+    <body style="background-image: url('../../Image/servic contact.jpg');background-repeat:no-repeat;background-size:cover">
+
+        <h2>@ViewBag.Title</h2>
+
+        <h3>Hi, Welcome to R-Car Website</h3>
+
+
+        <section style="font-display:auto">
+
+            <p>
+                R-car is a web page for users to renting the cars in Vic
+                Now offering the pick-up and drop-off location:<br />
+                Melbourne Airport<br />
+                Melbourne Center<br />
+                Monash University Caulfield Campus<br />
+                Monash University Clayton Campus<br />
+
+            </p>
+        </section>
+
+
+        <div>
+            @Html.ActionLink("Booking", "Index", "Bookings")
+        </div>
+
+        <div>
+            @Html.ActionLink("Back to Home", "Index")
+        </div>
+
+
+    </body>
